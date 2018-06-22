@@ -1,0 +1,6 @@
+#!/usr/bin/dh-exec
+usr/lib/${DEB_HOST_MULTIARCH}/*.a
+usr/lib/${DEB_HOST_MULTIARCH}/*.la
+usr/include/pqxx/
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/
+

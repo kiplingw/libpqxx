@@ -1,0 +1,77 @@
+Source: libpqxx6
+Section: libs
+Priority: optional
+Maintainer: Kip Warner <kip@thevertigo.com>
+Build-Depends-Indep: doxygen, xmlto
+Standards-Version: 4.1.4.2
+Vcs-Git: https://github.com/jtv/libpqxx.git
+Vcs-Browser: https://github.com/jtv/libpqxx
+Homepage: http://pqxx.org
+Build-Depends:
+    chrpath,
+    debhelper (>= 11),
+    dh-exec,
+    libpq-dev (>= 8.0.3),
+    libtool,
+    lintian,
+    pkg-config (>= 0.28),
+    po-debconf,
+    python-all
+
+Package: libpqxx6-dev
+Section: libdevel
+Architecture: any
+Pre-Depends:
+    ${misc:Pre-Depends}
+Depends:
+    ${misc:Depends},
+    pkg-config,
+    libpq-dev (>= 10.4),
+    libpqxx6 (= ${binary:Version})
+Suggests:
+    libpqxx6-doc
+Replaces:
+    libpqxx-dev
+Description: C++ library to connect to PostgreSQL (development files)
+ C++ library to enable user programs to communicate with
+ the PostgreSQL database back-end.
+ .
+ This package contains header files for linking against libpqxx.
+
+Package: libpqxx6-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Pre-Depends:
+    ${misc:Pre-Depends}
+Depends:
+    ${misc:Depends},
+    libjs-jquery
+Suggests:
+    libpqxx6-dev (>= ${binary:Version})
+Replaces:
+    libpqxx-doc
+Description: C++ library to connect to PostgreSQL (documentation)
+ C++ library to enable user programs to communicate with
+ the PostgreSQL database back-end.
+ .
+ This package contains documentation and examples.
+
+Package: libpqxx6
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+    ${misc:Pre-Depends}
+Depends:
+    ${misc:Depends},
+    ${shlibs:Depends}
+Conflicts:
+    libpqxx-dev
+Replaces:
+    libpqxx-4.0v5
+Description: C++ library to connect to PostgreSQL
+ C++ library to enable user programs to communicate with
+ the PostgreSQL database back-end. The database back-end can
+ be local or it may be on another machine, accessed via
+ TCP/IP.
+

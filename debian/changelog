@@ -1,0 +1,6 @@
+libpqxx6 (6.2.4-kip1~bionic) bionic; urgency=medium
+
+  * Build for bionic.
+
+ -- Kip Warner <kip@thevertigo.com>  Thu, 20 Jun 2018 19:43:00 -0700
+

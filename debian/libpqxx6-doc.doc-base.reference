@@ -1,0 +1,9 @@
+Document: libpqxx6-reference
+Title: libpqxx Reference Manual
+Author: Jeroen T. Vermeulen <jtvjtv@gmail.com>
+Abstract: A C++ API to the PostgreSQL database management system.
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/libpqxx-doc/html/Reference/index.html
+Files: /usr/share/doc/libpqxx-doc/html/Reference/*
